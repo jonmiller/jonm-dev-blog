@@ -1,0 +1,58 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <!--
+  <h1>Posts</h1>
+
+  <ul class="posts">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  -->
+
+  <div class="posts"/>
+    {% for post in paginator.posts %}
+      <div class="post">
+        <div class="post-header">
+          <h1>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </h1>
+          <p class="meta">Posted on <span class="postdate">{{ post.date | date: "%b %d, %Y" }}</span></p>
+        </div>
+        <div class="post-content">
+          {{ post.content }}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  
+  <div class="post-navigation">
+
+    {% if paginator.previous_page %}
+      {% if paginator.page == 2 %}
+        <a class="prev left" href="/">&larr; Newer</a>
+      {% else %}
+        <a class="prev left" href="/page{{paginator.previous_page}}/">&larr; Newer</a>
+      {% endif %}
+    {% else %}
+      <span class="nope left">&larr; Newer</span>
+    {% endif %}
+
+    <span class="pages">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+    {% if paginator.next_page %}
+      <a class="next right" href="/page{{paginator.next_page}}/">Older &rarr;</a>
+    {% else %}
+      <span class="nope right">Older &rarr;</span>
+    {% endif %}
+
+  </div>
+
+</div>

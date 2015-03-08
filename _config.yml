@@ -1,0 +1,17 @@
+# Site settings
+title: Resonance
+email: jonandrewmiller@gmail.com
+description: "A miscellany of tech thoughts"
+baseurl: ""
+url: "http://jonamiller.com"
+twitter_username: jonmillertime
+github_username: jonmiller
+
+paginate: 2
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+kramdown:
+  input: GFM
+exclude: [Gemfile, Gemfile.lock, .gitignore]
