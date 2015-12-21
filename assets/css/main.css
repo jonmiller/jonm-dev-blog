@@ -256,11 +256,8 @@ a:visited {
 .post-content blockquote {
   border-left: 4px solid #e8e8e8;
   padding-left: 20px;
-  font-size: 18px;
   opacity: .6;
-  letter-spacing: -1px;
   font-style: italic;
-  margin: 30px 0;
 }
 
 .post-content ul,
@@ -276,6 +273,10 @@ a:visited {
 .post pre,
 .post code {
   font: 1em Monaco, Courier, Monospace;
+}
+
+.post pre.lineno {
+  padding-right: 1em;
 }
 
 .post ul,

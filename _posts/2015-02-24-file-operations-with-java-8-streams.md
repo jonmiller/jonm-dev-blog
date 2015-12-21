@@ -3,7 +3,7 @@ layout: post
 title: File Operations With Java 8 Streams
 ---
 
-Streams are one of the major functional improvements introduced in Java 8 (the other being [lambda expressions](http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html)). Reams have written about streams in Java - the package [JavaDoc](http://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html) is actually a pretty good starting point. In this post though, I plan to focus on a few specific use cases around file operations that I've found useful.
+Streams are one of the major functional improvements introduced in Java 8 (the other being [lambda expressions](http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html)). Reams have been written about streams in Java - the package [JavaDoc](http://docs.oracle.com/javase/8/docs/api/java/util/stream/package-summary.html) is actually a pretty good starting point. In this post though, I plan to focus on a few specific use cases around file operations that I've found useful.
 
 Java 7 introduced NIO.2, replacing large portions of the original file I/O capability in Java. In Java 8, NIO.2 was further extended with support for streams - offering new solutions for some use cases, two of which, I'll be covering in this post.
 
@@ -27,7 +27,7 @@ And the task is to sum up all entries in the second column with a value greater 
 
 Easy enough with any version of Java, but quite verbose before streams. With streams though, one solution looks something like this:
 
-{% highlight java linenos %}
+{% highlight java linenos=table %}
 int sum = Files.lines(path)
         .map(line -> line.split(" ")[1])
         .mapToInt(Integer::parseInt)
@@ -49,7 +49,7 @@ Another use case for Java 8 streams is when it's necessary to walk a file tree a
 
 Consider this (again, not at all contrived) example. We want to recursively descend a file tree, finding all files ending with ".java", and returning them in a list of Strings sorted alphabetically.
 
-{% highlight java linenos %}
+{% highlight java linenos=table %}
 List<String> sortedJavaFilePaths = Files.walk(path)
         .filter(foundPath -> foundPath.toString().endsWith(".java"))
         .map(javaPath -> javaPath.getFileName().toString())

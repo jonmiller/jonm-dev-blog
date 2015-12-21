@@ -1,3 +1,4 @@
 _site
 _vendor
+.bundle/bin
 Gemfile.lock

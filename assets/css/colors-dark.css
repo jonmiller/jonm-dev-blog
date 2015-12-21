@@ -87,7 +87,7 @@ blockquote {
 }
 
 .highlight .k {
-  color: #cb4b16;
+  color: #859900;
 }
 
 .highlight .o {
@@ -168,7 +168,7 @@ blockquote {
 }
 
 .highlight .kd {
-  color: #268bd2;
+  color: #b58900;
 }
 
 .highlight .kp {
@@ -182,15 +182,15 @@ blockquote {
 }
 
 .highlight .kt {
-  color: #2aa198;
+  color: #839496;
 }
 
 .highlight .n {
-  color: #268bd2;
+  color: #839496;
 }
 
 .highlight .na {
-  color: #268bd2;
+  color: #839496;
 }
 
 .highlight .nb {
@@ -210,7 +210,7 @@ blockquote {
 }
 
 .highlight .nl {
-  color: #859900;
+  color: #839496;
 }
 
 .highlight .ne {
