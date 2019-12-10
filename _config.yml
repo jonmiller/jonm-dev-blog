@@ -15,4 +15,4 @@ permalink: pretty
 kramdown:
   input: GFM
 exclude: [Gemfile, Gemfile.lock, .gitignore]
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
